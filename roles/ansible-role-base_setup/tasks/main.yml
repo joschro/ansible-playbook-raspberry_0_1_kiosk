@@ -7,6 +7,11 @@
     state: present
   tags: base
 
+- name: Ensure group "opendj" exists
+  group:
+    name: opendj
+    state: present
+  tags: base
 
 - name: Add the user 'opendj' and corresponding group
   user:
