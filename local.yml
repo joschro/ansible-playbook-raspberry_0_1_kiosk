@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  gather_facts: yes
+  roles:
+    - { role: ansible-role-base_setup }

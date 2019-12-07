@@ -1,0 +1,22 @@
+---
+# tasks file for role basic_info
+
+- name: Ensure required packages are installed
+  package:
+    name: epel-release,vim,gdm,icewm,i3,xfwm4,fvwm,openbox
+    state: present
+  tags: base
+
+
+- name: Add the user 'opendj' and corresponding group
+  user:
+    name: opendj
+    comment: OpenDJ
+    group: opendj
+  tags: base
+
+
+#insert -> /etc/gdm/custom.conf
+#[daemon]
+#AutomaticLoginEnable=True
+#AutomaticLogin=opendj
