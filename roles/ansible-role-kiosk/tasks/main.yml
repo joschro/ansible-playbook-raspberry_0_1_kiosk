@@ -31,20 +31,26 @@
   template:
     src: kiosk.sh.jp2
     dest: /home/kiosk/kiosk.sh
-    mode: u=rwx
+    owner: kiosk
+    group: kiosk
+    mode: u=rwx,g=r,o=r
   tags: kiosk
 
 - name: Create directory if it does not exist
   file:
     path: /home/kiosk/.config/autostart
     state: directory
-    mode: u=rwx
+    owner: kiosk
+    group: kiosk
+    mode: u=rwx,g=r,o=r
   tags: kiosk
 
 - name: Install kiosk.desktop script
   template:
     src: kiosk.desktop.jp2
     dest: /home/kiosk/.config/autostart/kiosk.desktop
+    owner: kiosk
+    group: kiosk
     mode: u=rw,g=r,o=r
   tags: kiosk
 
@@ -52,5 +58,7 @@
   template:
     src: kiosk.urls.jp2
     dest: /home/kiosk/kiosk.urls
+    owner: kiosk
+    group: kiosk
     mode: u=rw,g=rw,o=r
   tags: kiosk
