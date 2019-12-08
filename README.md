@@ -1,9 +1,7 @@
 # ansible-playbook-raspberry_0_1_kiosk
 Playbook for Raspberry Pi zero and 1 to be set up as kiosk system
 
-## Install RedSleeve Linux
-
-see https://github.com/joschro/ansible-playbook-rpi_garage_door_opener
+## Install Raspbian Linux
 
 ## Run Ansible playbook
 Clone this Ansible github repository with
@@ -16,4 +14,4 @@ then change into the new directory
 
 Now run the playbook with
 
-''`[root@rpi ~]# sh ./run-playbook.sh```
+```[root@rpi ~]# sh ./run-playbook.sh```
