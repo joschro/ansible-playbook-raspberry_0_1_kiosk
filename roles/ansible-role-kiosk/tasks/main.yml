@@ -7,58 +7,58 @@
     state: present
   tags: kiosk
 
-- name: Ensure group "kiosk" exists
+- name: Ensure group "kioskuser" exists
   group:
-    name: kiosk
+    name: kioskuser
     state: present
   tags: kiosk
 
-- name: Add the user 'kiosk' and corresponding group
+- name: Add the user 'kioskuser' and corresponding group
   user:
-    name: kiosk
-    comment: Kiosk
-    group: kiosk
+    name: kioskuser
+    comment: "Kiosk User"
+    group: kioskuser
   tags: kiosk
 
 - name: Setup autologin
   lineinfile:
     path: /etc/lightdm/lightdm.conf
     regex: "^autologin-user=.*"
-    line: "autologin-user=kiosk"
+    line: "autologin-user=kioskuser"
   tags: kiosk
 
 - name: Install kiosk.sh script
   template:
     src: kiosk.sh.jp2
-    dest: /home/kiosk/kiosk.sh
-    owner: kiosk
-    group: kiosk
+    dest: /home/kioskuser/kiosk.sh
+    owner: kioskuser
+    group: kioskuser
     mode: u=rwx,g=r,o=r
   tags: kiosk
 
 - name: Create directory if it does not exist
   file:
-    path: /home/kiosk/.config/autostart
+    path: /home/kioskuser/.config/autostart
     state: directory
-    owner: kiosk
-    group: kiosk
+    owner: kioskuser
+    group: kioskuser
     mode: u=rwx,g=r,o=r
   tags: kiosk
 
 - name: Install kiosk.desktop script
   template:
     src: kiosk.desktop.jp2
-    dest: /home/kiosk/.config/autostart/kiosk.desktop
-    owner: kiosk
-    group: kiosk
+    dest: /home/kioskuser/.config/autostart/kiosk.desktop
+    owner: kioskuser
+    group: kioskuser
     mode: u=rw,g=r,o=r
   tags: kiosk
 
 - name: Install kiosk.urls script
   template:
     src: kiosk.urls.jp2
-    dest: /home/kiosk/kiosk.urls
-    owner: kiosk
-    group: kiosk
+    dest: /home/kioskuser/kiosk.urls
+    owner: kioskuser
+    group: kioskuser
     mode: u=rw,g=rw,o=r
   tags: kiosk
