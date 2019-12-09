@@ -1,7 +1,7 @@
 #!/bin/bash
  
 while :; do
-  ping -c2 -w5 $(sed "s/.*\/\/\(.*\.[a-z]*\).*/\1/g" /home/kioskuser/kiosk.urls) && break
+  ping -c2 -w5 $(echo "{{ kiosk_urls }}" | sed "s/.*\/\/\(.*\.[a-z]*\).*/\1/g") && break
   ps ax | grep lxterminal | grep -v grep || lxterminal
   sleep 10
 done
@@ -17,7 +17,7 @@ sed -i 's/"exited_cleanly":false/"exited_cleanly":true/' /home/kioskuser/.config
 sed -i 's/"exit_type":"Crashed"/"exit_type":"Normal"/' /home/kioskuser/.config/chromium/Default/Preferences
  
 # Run Chromium and open tabs
-/usr/bin/chromium-browser --window-size=480,320 --kiosk --window-position=0,0 $(cat /home/kioskuser/kiosk.urls) &
+/usr/bin/chromium-browser --window-size=480,320 --kiosk --window-position=0,0 {{ kiosk_urls }} &
  
 # Start the kiosk loop. This keystroke changes the Chromium tab
 # To have just anti-idle, use this line instead:
