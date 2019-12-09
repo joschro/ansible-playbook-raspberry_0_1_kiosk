@@ -53,12 +53,3 @@
     group: kioskuser
     mode: u=rw,g=r,o=r
   tags: kiosk
-
-- name: Install kiosk.urls script
-  template:
-    src: kiosk.urls.jp2
-    dest: /home/kioskuser/kiosk.urls
-    owner: kioskuser
-    group: kioskuser
-    mode: u=rw,g=rw,o=r
-  tags: kiosk
