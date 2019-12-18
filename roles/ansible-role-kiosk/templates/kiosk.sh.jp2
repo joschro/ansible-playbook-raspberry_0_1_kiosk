@@ -1,7 +1,8 @@
 #!/bin/bash
  
 while :; do
-  ping -c2 -w5 $(echo "{{ kiosk_urls }}" | sed "s/.*\/\/\(.*\.[a-z]*\).*/\1/g") && break
+  #ping -c2 -w5 $(echo "{{ kiosk_urls }}" | sed "s/.*\/\/\(.*\.[a-z]*\).*/\1/g") && break
+  curl "{{ kiosk_urls }}" && break
   ps ax | grep lxterminal | grep -v grep || lxterminal
   sleep 10
 done
