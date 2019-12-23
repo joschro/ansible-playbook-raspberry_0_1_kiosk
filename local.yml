@@ -3,7 +3,7 @@
   gather_facts: no
   vars:
 #    kiosk_urls: "https://opensource.com/open-organization/resources/book-series https://opensource.com/open-organization/resources/open-org-definition https://opensource.com/open-organization/resources/open-decision-framework"
-    kiosk_urls: "https://heise.de"
+    kiosk_urls: "www.opendj.io/demo/view www.opendj.io/rhforum/view"
 #  vars_files:
 #    - /root/kiosk_vars.yml
   roles:
