@@ -29,8 +29,8 @@ Playbook for Raspberry Pi zero and 1 to be set up as kiosk system
 * Edit the file telegram_secrets.yml and insert the telegram credentials for your bot and channel
 * Create autostart directory for user pi and add autostart file
 ```
-mkdir -p ../../home/pi/.config/lxsession/LXDE
-mv autostart ../../home/pi/.config/lxsession/LXDE/
+mkdir -p ../../home/pi/.config/autostart
+mv autostart.desktop ../../home/pi/.config/autostart/
 chown -R 1000:1000 ../../home/pi/.config
 ```
 * Edit ```kiosk_urls``` in local.yml to reflect your choice of URLs shown in kiosk mode
