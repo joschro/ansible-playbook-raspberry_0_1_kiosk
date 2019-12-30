@@ -28,7 +28,8 @@ Playbook for Raspberry Pi zero and 1 to be set up as kiosk system
 ```mv telegram_secrets.yml ../```
 * Edit the file telegram_secrets.yml and insert the telegram credentials for your bot and channel
 * Create autostart directory for user pi and add autostart file
-```mkdir -p ../../home/pi/.config/lxsession/LXDE
+```
+mkdir -p ../../home/pi/.config/lxsession/LXDE
 mv autostart ../../home/pi/.config/lxsession/LXDE/
 chown -R 1000:1000 ../../home/pi/.config/lxsession
 ```
@@ -37,7 +38,8 @@ chown -R 1000:1000 ../../home/pi/.config/lxsession
 ### Set up manually
 * Boot the Raspi; follow the instructions to set it up
 * Open a terminal and run
-```pi@raspberrypi:~ $ sudo su -
+```
+pi@raspberrypi:~ $ sudo su -
 root@raspberrypi:~# apt-get -y install vim ansible git screen
 ```
 
