@@ -53,3 +53,10 @@
     group: kioskuser
     mode: u=rw,g=r,o=r
   tags: kiosk
+
+- name: Enable sshd
+  service:
+    name: ssh
+    enabled: yes
+    state: started
+  tags: kiosk
