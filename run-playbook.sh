@@ -1,3 +1,3 @@
 #!/bin/sh
 
-ansible-playbook $* local.yml
+ansible-playbook $* local.yml && reboot
