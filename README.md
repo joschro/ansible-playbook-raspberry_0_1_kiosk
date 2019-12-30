@@ -33,7 +33,11 @@ mkdir -p ../../home/pi/.config/lxsession/LXDE
 mv autostart ../../home/pi/.config/lxsession/LXDE/
 chown -R 1000:1000 ../../home/pi/.config/lxsession
 ```
-* edit ```kiosk_urls``` in local.yml to reflect your choice of URLs shown in kiosk mode
+* Edit ```kiosk_urls``` in local.yml to reflect your choice of URLs shown in kiosk mode
+* Unmount /mnt
+
+```umount /mnt```
+* Insert card into Raspberry Pi Zero or Raspberry Pi 1 and power it up; follow the instructions on bootup and wait for the installation to complete and let the Raspi reboot
 
 ### Set up manually
 * Boot the Raspi; follow the instructions to set it up
