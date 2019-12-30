@@ -1,0 +1,6 @@
+# move to /home/pi/.config/autostart to start the playbook automatically on user "pi" autologin
+[Desktop Entry]
+Name=Run Playbook
+Exec=sudo sh -c 'sleep 30;cd /root/ansible-playbook-raspberry_0_1_kiosk && sh run-playbook.sh'
+Type=application
+
