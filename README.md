@@ -20,6 +20,9 @@ Playbook for Raspberry Pi zero and 1 to be set up as kiosk system
 * Unzip it
 
 ```unzip master.zip```
+* Change directory
+
+```cd ansible-playbook-raspberry_0_1_kiosk-master/```
 * Move the telegram secrets file to the root user's home directory
 
 ```mv telegram_secrets.yml ../```
