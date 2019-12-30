@@ -1,0 +1,2 @@
+# move to /home/pi/.config/lxsession/LXDE/autostart to start the playbook automatically on user "pi" autologin
+sudo sh -c 'sleep 30;cd /root/ansible-playbook-raspberry_0_1_kiosk && sh run-playbook.sh'
