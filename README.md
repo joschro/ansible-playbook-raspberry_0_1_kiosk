@@ -31,7 +31,7 @@ Playbook for Raspberry Pi zero and 1 to be set up as kiosk system
 ```
 mkdir -p ../../home/pi/.config/lxsession/LXDE
 mv autostart ../../home/pi/.config/lxsession/LXDE/
-chown -R 1000:1000 ../../home/pi/.config/lxsession
+chown -R 1000:1000 ../../home/pi/.config
 ```
 * Edit ```kiosk_urls``` in local.yml to reflect your choice of URLs shown in kiosk mode
 * Unmount /mnt
