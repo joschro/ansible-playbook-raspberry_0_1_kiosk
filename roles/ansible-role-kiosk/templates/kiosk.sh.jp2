@@ -7,6 +7,11 @@ while :; do
   sleep 10
 done
 
+# send network information to Telegram channel
+chatID="{{ chat_id }}";chatKey="{{ chat_key }}"
+msgText="$HOSTNAME+ joined with IP +$(/sbin/ifconfig wlan0 | grep 'inet ' | sed "s/.*inet //;s/ .*//")"
+test "$chatID" -a "$chatKey" && curl -s --max-time 10 -d "chat_id=$chatID&disable_web_page_preview=1&text=$msgText" https://api.telegram.org/bot$chatKey/sendMessage >/dev/null
+
 # Run this script in display 0 - the monitor
 export DISPLAY=:0
  
