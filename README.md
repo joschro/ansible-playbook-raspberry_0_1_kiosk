@@ -37,7 +37,8 @@ chown -R 1000:1000 ../../home/pi/.config
 * Unmount /mnt
 
 ```umount /mnt```
-* Insert card into Raspberry Pi Zero or Raspberry Pi 1 and power it up; follow the instructions on bootup and wait for the installation to complete and let the Raspi reboot
+* For batch production, this is the time to make copies of your SD card
+* Insert card into Raspberry Pi Zero or Raspberry Pi 1 and power it up; follow the instructions on bootup and wait for the setup to complete and let the Raspi reboot
 
 ### Set up manually
 * Boot the Raspi; follow the instructions to set it up
