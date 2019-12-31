@@ -8,7 +8,7 @@ Playbook for Raspberry Pi zero and 1 to be set up as kiosk system
 ```dd status=progress bs=4M of=/dev/sda if=<path-to-image>/2019-09-26-raspbian-buster.img```
 
 ### Set up for automatic installation in case of e.g. batch production of ready-to-go SDcards
-* Mount the 2nd partition, e.g. /dev/sda2, to e.g. /mnt
+* Mount the 2nd partition named "rootfs", e.g. /dev/sda2, to e.g. /mnt
 
 ```mount /dev/sda2 /mnt```
 * Change directory to the later home directory of the root user
