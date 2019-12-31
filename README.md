@@ -36,7 +36,7 @@ chown -R 1000:1000 ../../home/pi/.config
 * Edit ```kiosk_urls``` in local.yml to reflect your choice of URLs shown in kiosk mode
 * Unmount /mnt
 
-```umount /mnt```
+```cd; umount /mnt```
 * For batch production, this is the time to make copies of your SD card
 * Insert card into Raspberry Pi Zero or Raspberry Pi 1 and power it up; follow the instructions on bootup and wait for the setup to complete and let the Raspi reboot
 
