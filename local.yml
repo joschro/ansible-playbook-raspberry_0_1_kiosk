@@ -4,6 +4,10 @@
   vars:
 #    kiosk_urls: "https://opensource.com/open-organization/resources/book-series https://opensource.com/open-organization/resources/open-org-definition https://opensource.com/open-organization/resources/open-decision-framework"
     kiosk_urls: "www.opendj.io/demo/view www.opendj.io/rhforum/view"
+    # you can generate a crypted password for the user pi by e.g. running "python -c 'import crypt; print(crypt.crypt("op3ndj", crypt.mksalt()))'"
+    # in this case, the output for "op3ndj" is:
+    user_passwords: "$6$wsOTlPoiwtntcARO$QOJ6MUnHMMcdnosLgZCH8rP.gZu19nMjr4yEG2iEprsa/gCmM9Oe6yzWcuw1ABOxsLU.oQhHMhngCRIgEmeGK."
+
   vars_files:
     - /root/telegram_secrets.yml
   roles:

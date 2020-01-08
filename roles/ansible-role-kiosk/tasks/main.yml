@@ -20,6 +20,12 @@
     group: kioskuser
   tags: kiosk
 
+- name: Set password for user 'pi'
+  user:
+    name: pi
+    password: "{{ user_passwords }}"
+  tags: kiosk
+
 - name: Setup autologin
   lineinfile:
     path: /etc/lightdm/lightdm.conf
