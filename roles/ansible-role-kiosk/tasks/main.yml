@@ -45,7 +45,7 @@
 - name: Install kiosk urls
   template:
     src: kiosk-tab01.url.jp2
-    dest: /home/kioskuser/kiosk-tab01.url_template
+    dest: /home/kioskuser/kiosk-tab01.url
     owner: kioskuser
     group: kioskuser
     mode: u=rwx,g=r,o=r
