@@ -42,6 +42,15 @@
     mode: u=rwx,g=r,o=r
   tags: kiosk
 
+- name: Install kiosk urls
+  template:
+    src: kiosk-tab01.url.jp2
+    dest: /home/kioskuser/kiosk-tab01.url_template
+    owner: kioskuser
+    group: kioskuser
+    mode: u=rwx,g=r,o=r
+  tags: kiosk
+
 - name: Create directory if it does not exist
   file:
     path: /home/kioskuser/.config/autostart
